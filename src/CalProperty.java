@@ -13,7 +13,7 @@ public class CalProperty {
 
      // Set whether to see the steps on how the computer executes my algorithm
 
-    public static final boolean SHOW_STEPS = true;
+    public static final boolean SHOW_STEPS = false;
 
 
      // Create custom font with size

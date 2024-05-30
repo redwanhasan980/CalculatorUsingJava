@@ -31,10 +31,10 @@ public class Main {
         GridLayout inputPanelLayout = new GridLayout(3, 1);
         inputPanelLayout.setVgap(8);
 
-        GridLayout input1PanelLayout = new GridLayout(1, 3);
+        GridLayout input1PanelLayout = new GridLayout(1, 1);
         GridBagLayout buttonsPanelLayout = new GridBagLayout();
 
-        /** ================= COMPONENTS ==================== */
+
 
         JPanel panel = new JPanel(panelLayout);
         JPanel inputPanel = new JPanel(inputPanelLayout);
@@ -84,13 +84,13 @@ public class Main {
         CalButton dotButton = new CalButton(".", CalProperty.BLUE_COLOR);
         CalButton equalsButton = new CalButton("=", CalProperty.BLUE_COLOR);
 
-        /** ==================== STYLES ===================== */
+
 
         panel.setBorder(PADDING);
         panel.setBackground(CalProperty.DARK_COLOR);
 
         mode3.setForeground(CalProperty.FORE_COLOR);
-        mode3.setFont(CalProperty.createFont("Arial Rounded MT Bold",16));
+        mode3.setFont(CalProperty.createFont("Arial Rounded MT Bold",14));
 
 
         inputPanel.setBorder(PADDING);
@@ -158,9 +158,7 @@ public class Main {
             }
         };
 
-        /**
-         * Attach listeners to the main buttons
-         */
+
         num0Button.addActionListener(numListener);
         num1Button.addActionListener(numListener);
         num2Button.addActionListener(numListener);
@@ -180,9 +178,7 @@ public class Main {
 
 
 
-        /**
-         * Equal button listener
-         */
+
         equalsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -193,9 +189,7 @@ public class Main {
             }
         });
 
-        /**
-         * Clear button listener
-         */
+
         clearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -206,9 +200,7 @@ public class Main {
 
 
 
-        /**
-         * Power button listener
-         */
+
         powerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -234,10 +226,7 @@ public class Main {
                     num9Button.setForeground(CalProperty.GREEN_COLOR);
                 }
 
-                /**
-                 * Disable or enable buttons
-                 * Using the custom enabling and disabling algorithm I made
-                 */
+
                 num0Button.setCustomEnabled(isOn);
                 num1Button.setCustomEnabled(isOn);
                 num2Button.setCustomEnabled(isOn);
@@ -264,7 +253,7 @@ public class Main {
             }
         });
 
-        /** ============ ADDITION OF COMPONENTS ============== */
+
 
 
         input1Panel.add(mode3);

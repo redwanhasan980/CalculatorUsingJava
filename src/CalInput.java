@@ -183,9 +183,8 @@ class CalInput {
                     final int START_INDEX = (int)val.get("startIndex");
                     final int END_INDEX = (int)val.get("endIndex");
 
-                    /**
-                     * See evalutation steps
-                     */
+                     // See evalutation steps
+
                     if (CalProperty.SHOW_STEPS) {
                         System.out.printf("Operator: %-3c Input: %-20s  Left: %-10s Right: %-10s Evaluated: %s\n", op, input, LEFT_OPERAND, RIGHT_OPERAND, input.substring(START_INDEX, END_INDEX));
                     }
